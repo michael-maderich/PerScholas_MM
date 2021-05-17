@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>The Little Store - Shopping Cart</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="./styles/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href='https://fonts.googleapis.com/css?family=Inknut Antiqua|Gravitas One' rel='stylesheet'>
+        <script src="https://kit.fontawesome.com/5910fe5993.js" crossorigin="anonymous"></script>
+        <script src="./styles/js/bootstrap.min.js"></script>
+        <style>
+            html, body {height:100%;}
+            header {
+                width:100%;
+                background-color:skyblue;
+                /* position:fixed;
+                top:0; left:0; */
+                padding:.75em;
+                height:3.5em;
+            }
+                nav {
+                    float:left;
+                }
+                #action-icon {
+                    float:right;
+                }
+                #action-icon a {
+                    padding-left:1em;
+                    padding-right:1em;
+                }
+
+            #main-content {
+                height:100%;
+            }
+                #site-map {
+                    float:left;
+                    height:0px;
+                    width:8em;
+                    background-color:skyblue;
+                }
+                #center-content {
+                    text-align:center;
+                    padding-top:3em;
+                    /*margin-right:8em;  /*match site-map width*/
+                }
+                    #cart-panel h2 {
+                        font-family: 'Gravitas One', Verdana, Geneva, Tahoma, sans-serif;
+                    }
+                    #cart-table td {
+                        background-color:white;/*rgb(223, 223, 223);*/
+                        border:1px solid gray;
+                        padding-left:1em;
+                        padding-right:1em;
+                        padding-top:.5em;
+                        padding-bottom:.5em;
+                    }
+                    #cart-table img {
+                        height:5em;
+                    }
+                    .cart_image_panel {
+                        background-color:white;
+                    }
+                    .cart_subtotal_panel {
+                        font-weight:bold;
+                    }
+                    #left-img-content {
+                        float:left;
+                        position:absolute;
+                        top:20em;
+                        left:10%;
+                        z-index:-1;
+                    }
+                    #left-img-content img {
+                        height:20em;
+                    }
+                    #right-img-content {
+                        float:right;
+                        position:absolute;
+                        top:20em;
+                        right:10%;
+                        z-index:-1;
+                    }
+                    #right-img-content img {
+                        height:20em;
+                    }
+        </style>
+    </head>
+    <body style="background-color:powderblue">
+        <header>
+            <nav>
+                <i class="fas fa-bars"></i>
+                Menu
+            </nav>
+            <div id="action-icon">
+                <a href="login.html"><i class="fas fa-user-alt" title="Sign Up/Login"></i></a>                
+                <a href="cart.html"><i class="fas fa-shopping-cart" title="Shopping Cart"></i></a>
+            </div>
+        </header>
+        <div id="main-content">
+            <div id="site-map">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Laundry</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Personal Care</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Household</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">About</a></li>
+                </ul>
+            </div>
+            <div id="left-img-content">
+            </div>
+            <div id="center-content">
+                <div id="cart-panel">
+                    <h2>Shopping Cart</h2>
+                    <table id="cart-table" style="margin:0 auto; margin-top:2em;">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Item</th>
+                                <th>Size</th>
+                                <th>Price</th>
+                                <th>Qty</th>
+                                <th>Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="cart_image_panel"><img src="https://azcdn.messenger.pgsitecore.com/en-us/-/media/Febreze/Images/Products/product_primary_images/November%202019%20Updates/USenDTPDPMainAIRLilacViolet.png" alt="Febreze Air Lilac & Violet" /></td>
+                                <td>Febreze Air Lilac & Violet </td>
+                                <td>8.8 oz</td>
+                                <td>$2.00</td>
+                                <td>1</td>
+                                <td class="cart_subtotal_panel">$2.00</td>
+                            </tr>
+                            <tr>
+                                <td class="cart_image_panel"><img src="https://pics.drugstore.com/prodimg/621410/100.jpg" alt="Tide Detergent 37 oz" /></td>
+                                <td>Tide Detergent</td>
+                                <td>37 oz</td>
+                                <td>$3.33</td>
+                                <td>3</td>
+                                <td class="cart_subtotal_panel">$10.00</td>
+                            </tr>
+                            <tr>
+                                <td class="cart_image_panel"><img src="https://i5.walmartimages.com/asr/41ce085f-fac8-4795-867c-2869dfc21568.bb8374d031aa0ad319fcdcdda75926e7.jpeg" alt="Crest 3D White Radiant Mint 3.0 oz" /></td>
+                                <td>Crest 3D White Radiant Mint</td>
+                                <td>3.0 oz</td>
+                                <td>$1.00</td>
+                                <td>5</td>
+                                <td class="cart_subtotal_panel">$5.00</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td></td><td></td><td></td><td></td>
+                                <td class="cart_subtotal_panel">Total:</td>
+                                <td class="cart_subtotal_panel">$17.00</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            <div id="right-img-content">
+            </div>
+        </div>
+        <footer></footer>
+    </body>
+</html>

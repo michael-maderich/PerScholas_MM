@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>The Little Store - Log In</title>
+        <link href="./styles/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href='https://fonts.googleapis.com/css?family=Inknut Antiqua|Gravitas One' rel='stylesheet'>
+        <script src="https://kit.fontawesome.com/5910fe5993.js" crossorigin="anonymous"></script>
+        <script src="./styles/js/bootstrap.min.js"></script>
+        <script src="./styles/js/login.js" async></script>
+        <style>
+            html, body {height:100%;}
+            header {
+                width:100%;
+                background-color:skyblue;
+                /* position:fixed;
+                top:0; left:0; */
+                padding:.75em;
+                height:3.5em;
+            }
+                nav {
+                    float:left;
+                }
+                #action-icon {
+                    float:right;
+                }
+                #action-icon a {
+                    padding-left:1em;
+                    padding-right:1em;
+                }
+
+            #main-content {
+                height:100%;
+            }
+                #site-map {
+                    float:left;
+                    height:0px;
+                    width:8em;
+                    background-color:skyblue;
+                }
+                #center-content {
+                    text-align:center;
+                    padding-top:3em;
+                    /*margin-right:8em;  /*match site-map width*/
+                }
+                    #login-panel h2 {
+                        font-family: 'Gravitas One', Verdana, Geneva, Tahoma, sans-serif;
+                    }
+                    form input {
+                        margin-bottom:1em;
+                    }
+                    form .text-field {
+                        width:16em;
+                    }
+
+                    #bottom-img-content {
+                    }
+        </style>
+    </head>
+    <body style="background-color:powderblue">
+        <header>
+            <nav>
+                <i class="fas fa-bars"></i>
+                Menu
+            </nav>
+            <div id="action-icon">
+                <a href="login.html"><i class="fas fa-user-alt" title="Sign Up/Login"></i></a>                
+                <a href="cart.html"><i class="fas fa-shopping-cart" title="Shopping Cart"></i></a>
+            </div>
+        </header>
+        <div id="main-content">
+            <div id="site-map">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Laundry</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Personal Care</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Household</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">About</a></li>
+                </ul>
+            </div>
+            <div id="center-content">
+                <div id="login-panel">
+                    <h2>Log In</h2>
+                    <p>New User? Click <a href="signup.html">here</a> to Sign Up</p>
+                    <form>
+                        <br /><label for="email">
+                            <input id="email" name="email" type="email" placeholder="Email Address" required class = "text-field"/>
+                        </label>
+                        <br /><label for="pass">
+                            <input id="pass" name="pass" type="password" placeholder="Password" required class="text-field"/>
+                        </label>
+                        <br /><label for="submit">
+                            <button id="submit" name="submit" type="submit" onsubmit="validateForm()">Submit</button>
+                        </label>
+                    </form>
+                </div>
+                <div id="bottom-img-content">
+                    <img src="https://azcdn.messenger.pgsitecore.com/en-us/-/media/Febreze/Images/Products/product_primary_images/One%20and%20Done%20Project/US_DT_PDP_WAX_AprilFresh.png" alt="Tide Detergent" width=200em; />
+                </div>
+            </div>
+        </div>
+        <footer></footer>
+    </body>
+</html>
